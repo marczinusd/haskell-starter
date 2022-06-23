@@ -1,0 +1,10 @@
+{
+  "explorer.excludeGitIgnore": true,
+  "[haskell]": {
+    "files.insertFinalNewline": true
+  },
+  "haskell.formattingProvider": "floskell",
+  "haskell.manageHLS": "GHCup",
+  "haskell.plugin.ghcide-completions.config.autoExtendOn": true,
+  "haskell.plugin.ghcide-completions.config.snippetsOn": true
+}
