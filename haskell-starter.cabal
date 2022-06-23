@@ -1,0 +1,71 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 3d5db7327eafad822c42dd3b3a38861dc7c8b57d769a3adc58e9b032643936ba
+
+name:           haskell-starter
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-starter#readme>
+homepage:       https://github.com/githubuser/haskell-starter#readme
+bug-reports:    https://github.com/githubuser/haskell-starter/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2022 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/haskell-starter
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_haskell_starter
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , containers
+    , random
+    , rio
+    , transformers
+  default-language: Haskell2010
+
+executable haskell-starter-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_starter
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , haskell-starter
+  default-language: Haskell2010
+
+test-suite haskell-starter-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      HelloSpec
+      Paths_haskell_starter
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , containers
+    , haskell-starter
+    , hspec
+    , hspec-core
+  default-language: Haskell2010
